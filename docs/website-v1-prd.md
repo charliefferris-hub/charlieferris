@@ -65,14 +65,14 @@ Dependency graph: M1 → M2 (first deploy). M1 → M3 → M4. M5 and M6 can run 
 Create the project and the folder structure.
 
 - [x] Charlie creates an empty public GitHub repo named `charlieferris` (no README, no licence)
-- [ ] Claude gets push access to the repo
+- [x] Claude gets push access to the repo
 - [x] Scaffold with `npx create-next-app@latest` using TypeScript, App Router, Tailwind, ESLint, no `src/` folder
 - [x] Create empty folders: `components/ui`, `components/sections`, `components/illustrations`, `content`, `docs`
 - [x] Copy brand guidelines to `docs/brand-guidelines.md`
 - [x] Copy this PRD to `docs/website-v1-prd.md`
 - [x] Replace the starter `app/page.tsx` with a single line: "Charlie Ferris. Coming soon."
 - [x] `npm run build` passes
-- [ ] Commit `chore: scaffold Next.js site` and push to `main` (Charlie approves the push)
+- [x] Commit `chore: scaffold Next.js site` and push to `main` (Charlie approves the push)
 
 ### M2 - First deploy (learn the loop early)
 
