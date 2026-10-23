@@ -134,7 +134,7 @@ Words and links live here, apart from layout. Needs M1. Charlie reviews every li
 - [x] `content/apps.ts` exports a typed list. Each app has: `name`, `tag` (`fun` or `cs`), `blurb`, `url` (or null), `button`, `colour`, `illustration`
 - [x] Flight tracker entry: tag `fun`, blurb `Tells me which plane is flying over my flat right now.`, button `Take off`, colour coral, illustration Plane, url `https://flights-overhead-brown.vercel.app/`
 - [x] Help centre entry: tag `cs`, blurb `Answers the common questions before they turn into calls and emails.`, url null (shows "Coming soon"), colour lime, illustration SpeechBubble
-- [ ] Adding a third app needs only a new entry in `apps.ts` (check by adding a dummy entry locally, then removing it)
+- [x] Adding a third app needs only a new entry in `apps.ts` (check by adding a dummy entry locally, then removing it)
 
 ### M6 - Illustrations
 
@@ -146,45 +146,45 @@ Chunky, flat SVG drawings to the brand rules. Needs M1.
 - [x] `Sparkle.tsx`: small accent, marigold
 - [x] Every drawing: one ink outline thickness, at most three colours plus ink and cream, flat deep-shade shading, no gradients
 - [x] Every drawing has `aria-hidden="true"` (decoration only)
-- [ ] Charlie approves the headset drawing before M7 starts
+- [x] Charlie approves the headset drawing before M7 starts
 
 ### M7 - Sections and page
 
 Assemble the one-page site. Needs M4, M5 and M6.
 
-- [ ] `Header`: on cobalt. Left: wordmark `Charlie Ferris` in Bricolage, cream. Right: Button `Say hello` linking to `#contact`
-- [ ] `Hero`: cobalt drench. Eyebrow, then H1 `I make service feel human.` in cream, with `human.` in cobalt-light. Intro paragraph in cream. Button `Message me on LinkedIn`. Headset illustration on the right (stacks below the text on phones)
-- [ ] `Numbers`: on cream, heading `20 years, in numbers`. Four white Cards in a row on desktop, two by two on tablet, one column on phone
-- [ ] `Apps`: on cream. Heading `Things I've built`, subhead `Small apps I made with AI agents, from idea to live.` One Card per entry in `apps.ts`, each with IconChip, Tag, name, blurb and Button
-- [ ] App buttons open in a new tab with `rel="noopener"`
-- [ ] `Contact` (id `contact`) inside the cobalt footer: H2 `Let's talk about your customers.` in cream, Button `Message me on LinkedIn`
-- [ ] Footer small print in cobalt-light: `Built with Next.js and AI agents. Hosted on Vercel. © 2026 Charlie Ferris`
-- [ ] `app/page.tsx` renders Header, Hero, Numbers, Apps, Footer in that order and holds no copy of its own
-- [ ] Bold one phrase per paragraph at most, per the voice rules
-- [ ] No emoji, stock photos, gradients or blurred shadows anywhere
+- [x] `Header`: on cobalt. Left: wordmark `Charlie Ferris` in Bricolage, cream. Right: Button `Say hello` linking to `#contact`
+- [x] `Hero`: cobalt drench. Eyebrow, then H1 `I make service feel human.` in cream, with `human.` in cobalt-light. Intro paragraph in cream. Button `Message me on LinkedIn`. Headset illustration on the right (stacks below the text on phones)
+- [x] `Numbers`: on cream, heading `20 years, in numbers`. Four white Cards in a row on desktop, two by two on tablet, one column on phone
+- [x] `Apps`: on cream. Heading `Things I've built`, subhead `Small apps I made with AI agents, from idea to live.` One Card per entry in `apps.ts`, each with IconChip, Tag, name, blurb and Button
+- [x] App buttons open in a new tab with `rel="noopener"`
+- [x] `Contact` (id `contact`) inside the cobalt footer: H2 `Let's talk about your customers.` in cream, Button `Message me on LinkedIn`
+- [x] Footer small print in cobalt-light: `Built with Next.js and AI agents. Hosted on Vercel. © 2026 Charlie Ferris`
+- [x] `app/page.tsx` renders Header, Hero, Numbers, Apps, Footer in that order and holds no copy of its own
+- [x] Bold one phrase per paragraph at most, per the voice rules
+- [x] No emoji, stock photos, gradients or blurred shadows anywhere
 
 ### M8 - Metadata, favicon and analytics
 
 The finishing touches for sharing and counting. Needs M7.
 
-- [ ] `metadata` in `app/layout.tsx`: title `Charlie Ferris – Customer experience leader`, description `20 years leading customer teams, from 400 people at Utility Warehouse to Housekeep. I make service feel human.`
-- [ ] Favicon `app/icon.svg`: cobalt square, 8px corners, `CF` in cream Bricolage
-- [ ] Add `@vercel/analytics` and render `<Analytics />` from `@vercel/analytics/next` in `app/layout.tsx`
-- [ ] `robots`: allow indexing
+- [x] `metadata` in `app/layout.tsx`: title `Charlie Ferris – Customer experience leader`, description `20 years leading customer teams, from 400 people at Utility Warehouse to Housekeep. I make service feel human.`
+- [x] Favicon `app/icon.svg`: cobalt square, 8px corners, `CF` in cream Bricolage
+- [x] Add `@vercel/analytics` and render `<Analytics />` from `@vercel/analytics/next` in `app/layout.tsx`
+- [x] `robots`: allow indexing
 
 ### M9 - Verification and launch
 
 Run before merging `v1-build` into `main`.
 
-- [ ] `npm run build` passes with no errors
-- [ ] `npm run lint` passes
+- [x] `npm run build` passes with no errors
+- [x] `npm run lint` passes
 - [ ] Preview link loads on Charlie's phone and on a desktop browser
 - [ ] Layout holds at 360px, 768px and 1280px wide, with no sideways scroll
 - [ ] Every button and link works: Say hello scrolls to contact, both LinkedIn buttons open the profile, Take off opens the flight tracker, Coming soon does nothing
 - [ ] Keyboard check: Tab reaches every button in order, with a visible focus ring
 - [ ] Brand check against `docs/brand-guidelines.md`: cobalt top and footer, cream middle, white cards only, every button marigold with ink outline, one pop colour per card, no illustration on its own main colour
-- [ ] Contrast check: cobalt-light on cobalt and cream on cobalt both pass WCAG AA
-- [ ] Privacy check: no postcode, area, age or passport detail anywhere on the page
+- [x] Contrast check: cobalt-light on cobalt and cream on cobalt both pass WCAG AA
+- [x] Privacy check: no postcode, area, age or passport detail anywhere on the page
 - [ ] Charlie reads every line of copy and approves it
 - [ ] Charlie approves the merge in chat. Merge `v1-build` → `main`
 - [ ] Live site at `charlieferris.vercel.app` shows the new page

@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* The docs mention words like "blur"; keep them out of the class scan. */
+@source not "../docs";
+
 /*
   Brand tokens. Source of truth: docs/brand-guidelines.md.
   Every colour, corner, shadow and border on the site comes from this block.
@@ -84,8 +87,15 @@
   line-height: 1.05;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+}
+
 @layer base {
   html {
+    scroll-behavior: smooth;
     background-color: var(--color-cream);
     color: var(--color-ink);
   }
