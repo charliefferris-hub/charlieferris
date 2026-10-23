@@ -1,6 +1,6 @@
 # Charlie Ferris website V1 PRD
 
-**Status:** Draft, 2026-10-23
+**Status:** Live, 2026-10-23, at https://charlieferris.vercel.app
 **Owner:** Charlie Ferris
 **Surface:** New repo `charlieferris` on GitHub, deployed to `charlieferris.vercel.app`. Files: `app/layout.tsx`, `app/page.tsx`, `app/globals.css`, `components/**`, `content/**`, `public/**`, `docs/**`.
 
@@ -187,9 +187,9 @@ Run before merging `v1-build` into `main`.
 - [x] Privacy check: no postcode, area, age or passport detail anywhere on the page
 - [x] Charlie reads every line of copy and approves it
 - [x] Charlie approves the merge in chat. Merge `v1-build` → `main`
-- [ ] Live site at `charlieferris.vercel.app` shows the new page
-- [ ] Vercel Analytics shows at least one visit after Charlie opens the live site
-- [ ] Update the Project docs: brand guidelines unchanged, PRD ticked off, live URL recorded
+- [x] Live site at `charlieferris.vercel.app` shows the new page
+- [x] Vercel Analytics shows at least one visit after Charlie opens the live site
+- [x] Update the Project docs: brand guidelines unchanged, PRD ticked off, live URL recorded
 
 ## Out of scope / future additions
 
