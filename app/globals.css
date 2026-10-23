@@ -1,26 +1,106 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
+/*
+  Brand tokens. Source of truth: docs/brand-guidelines.md.
+  Every colour, corner, shadow and border on the site comes from this block.
+*/
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Remove Tailwind's default palette, so only brand colours exist. */
+  --color-*: initial;
+
+  /* Cobalt (brand) */
+  --color-cobalt-light: #bfd3ff;
+  --color-cobalt: #1d3fcf;
+  --color-cobalt-deep: #0f2580;
+
+  /* Marigold (buttons) */
+  --color-marigold-light: #ffe4a6;
+  --color-marigold: #ffb921;
+  --color-marigold-deep: #c98400;
+
+  /* Coral (pop) */
+  --color-coral-light: #ffcdc6;
+  --color-coral: #ff6b5b;
+  --color-coral-deep: #c93a2b;
+
+  /* Lime (pop) */
+  --color-lime-light: #ecf8c6;
+  --color-lime: #c9ec5a;
+  --color-lime-deep: #7fa61a;
+
+  /* Neutrals */
+  --color-cream: #fffef2;
+  --color-white: #ffffff;
+  --color-ink: #101010;
+  --color-body: #3a3a3a;
+
+  /* Corners */
+  --radius-card: 16px;
+  --radius-button: 8px;
+  --radius-chip: 10px;
+
+  /* Solid shadows: 8px down and right, never blurred */
+  --shadow-cobalt: 8px 8px 0 0 #1d3fcf;
+  --shadow-marigold: 8px 8px 0 0 #ffb921;
+  --shadow-coral: 8px 8px 0 0 #ff6b5b;
+  --shadow-lime: 8px 8px 0 0 #c9ec5a;
+
+  /* Borders: 2px ink on cards and buttons, 3px on large blocks */
+  --border-card: 2px;
+  --border-block: 3px;
+
+  /* Content width */
+  --container-content: 1180px;
+
+  /* Fonts (loaded in app/layout.tsx with next/font/google) */
+  --font-sans: var(--font-dm-sans);
+  --font-display: var(--font-bricolage);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Border utilities built from the tokens above: border-card, border-block */
+@utility border-card {
+  border: var(--border-card) solid var(--color-ink);
+}
+
+@utility border-block {
+  border: var(--border-block) solid var(--color-ink);
+}
+
+/* Visible keyboard focus: cream then ink ring, so it shows on cobalt and on cream */
+@utility focus-ring {
+  &:focus-visible {
+    outline: none;
+    box-shadow:
+      0 0 0 3px var(--color-cream),
+      0 0 0 6px var(--color-ink);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Headline style: Bricolage 800, tight letter-spacing */
+@utility headline {
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+}
+
+@layer base {
+  html {
+    background-color: var(--color-cream);
+    color: var(--color-ink);
+  }
+
+  body {
+    background-color: var(--color-cream);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
 }

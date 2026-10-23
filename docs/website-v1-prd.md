@@ -78,74 +78,74 @@ Create the project and the folder structure.
 
 Prove GitHub to Vercel works before building anything big. Needs M1.
 
-- [ ] Charlie opens Vercel → Add New → Project → imports `charlieferris` from GitHub
-- [ ] Project name `charlieferris`, framework preset Next.js, all defaults
-- [ ] Deploy succeeds and "Charlie Ferris. Coming soon." shows at `charlieferris.vercel.app`
-- [ ] If `charlieferris` is taken on vercel.app, Charlie picks a fallback and records it here: `__________`
-- [ ] Charlie turns on Web Analytics in the Vercel project (Analytics tab → Enable)
-- [ ] All later work happens on branch `v1-build`. Each push gives a preview link Charlie can open on his phone
+- [x] Charlie opens Vercel → Add New → Project → imports `charlieferris` from GitHub
+- [x] Project name `charlieferris`, framework preset Next.js, all defaults
+- [x] Deploy succeeds and "Charlie Ferris. Coming soon." shows at `charlieferris.vercel.app`
+- [x] If `charlieferris` is taken on vercel.app, Charlie picks a fallback and records it here: not needed, `charlieferris` was free
+- [x] Charlie turns on Web Analytics in the Vercel project (Analytics tab → Enable)
+- [x] All later work happens on branch `v1-build`. Each push gives a preview link Charlie can open on his phone
 
 ### M3 - Design tokens and fonts
 
 Turn the brand guidelines into code. Needs M1.
 
-- [ ] In `app/globals.css`, an `@theme` block with these colour tokens:
+- [x] In `app/globals.css`, an `@theme` block with these colour tokens:
   - `cobalt-light #BFD3FF`, `cobalt #1D3FCF`, `cobalt-deep #0F2580`
   - `marigold-light #FFE4A6`, `marigold #FFB921`, `marigold-deep #C98400`
   - `coral-light #FFCDC6`, `coral #FF6B5B`, `coral-deep #C93A2B`
   - `lime-light #ECF8C6`, `lime #C9EC5A`, `lime-deep #7FA61A`
   - `cream #FFFEF2`, `white #FFFFFF`, `ink #101010`, `body #3A3A3A`
-- [ ] Radius tokens: `card 16px`, `button 8px`, `chip 10px`
-- [ ] Shadow tokens: solid, `8px 8px 0 0` in each main colour (cobalt, marigold, coral, lime). No blur
-- [ ] Border tokens: 2px ink for cards and buttons, 3px ink for large blocks
-- [ ] Content width token: `1180px`
-- [ ] Remove Tailwind's default colour palette so off-brand colours cannot be used by accident
-- [ ] `app/layout.tsx` loads Bricolage Grotesque (weight 800) and DM Sans (400, 500, 700) with `next/font/google`, exposed as CSS variables
-- [ ] Headline style: Bricolage 800, letter-spacing `-0.02em`
-- [ ] Page background `cream`, body text `ink`, `<html lang="en-GB">`
+- [x] Radius tokens: `card 16px`, `button 8px`, `chip 10px`
+- [x] Shadow tokens: solid, `8px 8px 0 0` in each main colour (cobalt, marigold, coral, lime). No blur
+- [x] Border tokens: 2px ink for cards and buttons, 3px ink for large blocks
+- [x] Content width token: `1180px`
+- [x] Remove Tailwind's default colour palette so off-brand colours cannot be used by accident
+- [x] `app/layout.tsx` loads Bricolage Grotesque (weight 800) and DM Sans (400, 500, 700) with `next/font/google`, exposed as CSS variables
+- [x] Headline style: Bricolage 800, letter-spacing `-0.02em`
+- [x] Page background `cream`, body text `ink`, `<html lang="en-GB">`
 
 ### M4 - UI components
 
 The building blocks. Each follows the brand rules so pages stay on-brand. Needs M3.
 
-- [ ] `Button`: marigold fill, ink text, 2px ink outline, 8px corners. Hover: marigold-deep. Renders as a link when given `href`. Visible focus ring
-- [ ] `Button` disabled state for "Coming soon": marigold-light fill, ink text, no hover, `aria-disabled`
-- [ ] `Card`: white fill, 2px ink outline, 16px corners, solid 8px shadow. Takes one `colour` prop (cobalt, coral, lime or marigold) that sets both shadow and chip, so one card never mixes pop colours
-- [ ] `IconChip`: 10px corners, light shade fill, 2px ink outline, holds one illustration or icon
-- [ ] `Tag`: small pill for "Just for fun" and "For customers", light shade of the card's colour, ink text
-- [ ] `Section`: centred wrapper at 1180px max width, generous vertical padding, `tone` prop (`cobalt`, `cream`)
+- [x] `Button`: marigold fill, ink text, 2px ink outline, 8px corners. Hover: marigold-deep. Renders as a link when given `href`. Visible focus ring
+- [x] `Button` disabled state for "Coming soon": marigold-light fill, ink text, no hover, `aria-disabled`
+- [x] `Card`: white fill, 2px ink outline, 16px corners, solid 8px shadow. Takes one `colour` prop (cobalt, coral, lime or marigold) that sets both shadow and chip, so one card never mixes pop colours
+- [x] `IconChip`: 10px corners, light shade fill, 2px ink outline, holds one illustration or icon
+- [x] `Tag`: small pill for "Just for fun" and "For customers", light shade of the card's colour, ink text
+- [x] `Section`: centred wrapper at 1180px max width, generous vertical padding, `tone` prop (`cobalt`, `cream`)
 - [ ] Every component works at 360px wide (phone)
 
 ### M5 - Content files
 
 Words and links live here, apart from layout. Needs M1. Charlie reviews every line before M9.
 
-- [ ] `content/profile.ts` holds:
+- [x] `content/profile.ts` holds:
   - name: `Charlie Ferris`
   - eyebrow: `Customer experience leader, London`
   - headline: `I make service feel` + key word `human.`
   - intro: `I've spent 20 years leading customer teams. I build **teams people want to work in**, and services customers trust.`
   - linkedin: `https://www.linkedin.com/in/charlie-ferris/`
-- [ ] `content/profile.ts` numbers (one card each, colour in brackets):
+- [x] `content/profile.ts` numbers (one card each, colour in brackets):
   - `20 years` / `in customer experience` (cobalt)
   - `400 people` / `led at Utility Warehouse` (coral)
   - `45 people` / `led at Housekeep, for 6 years` (lime)
   - `CIPD` / `qualified in learning and development` (marigold)
-- [ ] `content/apps.ts` exports a typed list. Each app has: `name`, `tag` (`fun` or `cs`), `blurb`, `url` (or null), `button`, `colour`, `illustration`
-- [ ] Flight tracker entry: tag `fun`, blurb `Tells me which plane is flying over my flat right now.`, button `Take off`, colour coral, illustration Plane, url `https://flights-overhead-brown.vercel.app/`
-- [ ] Help centre entry: tag `cs`, blurb `Answers the common questions before they turn into calls and emails.`, url null (shows "Coming soon"), colour lime, illustration SpeechBubble
+- [x] `content/apps.ts` exports a typed list. Each app has: `name`, `tag` (`fun` or `cs`), `blurb`, `url` (or null), `button`, `colour`, `illustration`
+- [x] Flight tracker entry: tag `fun`, blurb `Tells me which plane is flying over my flat right now.`, button `Take off`, colour coral, illustration Plane, url `https://flights-overhead-brown.vercel.app/`
+- [x] Help centre entry: tag `cs`, blurb `Answers the common questions before they turn into calls and emails.`, url null (shows "Coming soon"), colour lime, illustration SpeechBubble
 - [ ] Adding a third app needs only a new entry in `apps.ts` (check by adding a dummy entry locally, then removing it)
 
 ### M6 - Illustrations
 
 Chunky, flat SVG drawings to the brand rules. Needs M1.
 
-- [ ] `Headset.tsx` for the hero: marigold and coral fills, ink outlines, floats over a small flat ink oval shadow, plus sparkle lines. No cobalt main fill, because it sits on cobalt
-- [ ] `Plane.tsx`: coral and cream fills, motion lines
-- [ ] `SpeechBubble.tsx`: lime and white fills
-- [ ] `Sparkle.tsx`: small accent, marigold
-- [ ] Every drawing: one ink outline thickness, at most three colours plus ink and cream, flat deep-shade shading, no gradients
-- [ ] Every drawing has `aria-hidden="true"` (decoration only)
+- [x] `Headset.tsx` for the hero: marigold and coral fills, ink outlines, floats over a small flat ink oval shadow, plus sparkle lines. No cobalt main fill, because it sits on cobalt
+- [x] `Plane.tsx`: coral and cream fills, motion lines
+- [x] `SpeechBubble.tsx`: lime and white fills
+- [x] `Sparkle.tsx`: small accent, marigold
+- [x] Every drawing: one ink outline thickness, at most three colours plus ink and cream, flat deep-shade shading, no gradients
+- [x] Every drawing has `aria-hidden="true"` (decoration only)
 - [ ] Charlie approves the headset drawing before M7 starts
 
 ### M7 - Sections and page
