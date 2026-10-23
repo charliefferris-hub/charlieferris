@@ -114,7 +114,7 @@ The building blocks. Each follows the brand rules so pages stay on-brand. Needs 
 - [x] `IconChip`: 10px corners, light shade fill, 2px ink outline, holds one illustration or icon
 - [x] `Tag`: small pill for "Just for fun" and "For customers", light shade of the card's colour, ink text
 - [x] `Section`: centred wrapper at 1180px max width, generous vertical padding, `tone` prop (`cobalt`, `cream`)
-- [ ] Every component works at 360px wide (phone)
+- [x] Every component works at 360px wide (phone)
 
 ### M5 - Content files
 
@@ -179,10 +179,10 @@ Run before merging `v1-build` into `main`.
 - [x] `npm run build` passes with no errors
 - [x] `npm run lint` passes
 - [ ] Preview link loads on Charlie's phone and on a desktop browser
-- [ ] Layout holds at 360px, 768px and 1280px wide, with no sideways scroll
+- [x] Layout holds at 360px, 768px and 1280px wide, with no sideways scroll
 - [ ] Every button and link works: Say hello scrolls to contact, both LinkedIn buttons open the profile, Take off opens the flight tracker, Coming soon does nothing
 - [ ] Keyboard check: Tab reaches every button in order, with a visible focus ring
-- [ ] Brand check against `docs/brand-guidelines.md`: cobalt top and footer, cream middle, white cards only, every button marigold with ink outline, one pop colour per card, no illustration on its own main colour
+- [x] Brand check against `docs/brand-guidelines.md`: cobalt top and footer, cream middle, white cards only, every button marigold with ink outline, one pop colour per card, no illustration on its own main colour
 - [x] Contrast check: cobalt-light on cobalt and cream on cobalt both pass WCAG AA
 - [x] Privacy check: no postcode, area, age or passport detail anywhere on the page
 - [ ] Charlie reads every line of copy and approves it
