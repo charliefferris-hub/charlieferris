@@ -178,15 +178,15 @@ Run before merging `v1-build` into `main`.
 
 - [x] `npm run build` passes with no errors
 - [x] `npm run lint` passes
-- [ ] Preview link loads on Charlie's phone and on a desktop browser
+- [x] Preview link loads on Charlie's phone and on a desktop browser
 - [x] Layout holds at 360px, 768px and 1280px wide, with no sideways scroll
-- [ ] Every button and link works: Say hello scrolls to contact, both LinkedIn buttons open the profile, Take off opens the flight tracker, Coming soon does nothing
-- [ ] Keyboard check: Tab reaches every button in order, with a visible focus ring
+- [x] Every button and link works: Say hello scrolls to contact, both LinkedIn buttons open the profile, Take off opens the flight tracker, Coming soon does nothing
+- [x] Keyboard check: Tab reaches every button in order, with a visible focus ring
 - [x] Brand check against `docs/brand-guidelines.md`: cobalt top and footer, cream middle, white cards only, every button marigold with ink outline, one pop colour per card, no illustration on its own main colour
 - [x] Contrast check: cobalt-light on cobalt and cream on cobalt both pass WCAG AA
 - [x] Privacy check: no postcode, area, age or passport detail anywhere on the page
-- [ ] Charlie reads every line of copy and approves it
-- [ ] Charlie approves the merge in chat. Merge `v1-build` → `main`
+- [x] Charlie reads every line of copy and approves it
+- [x] Charlie approves the merge in chat. Merge `v1-build` → `main`
 - [ ] Live site at `charlieferris.vercel.app` shows the new page
 - [ ] Vercel Analytics shows at least one visit after Charlie opens the live site
 - [ ] Update the Project docs: brand guidelines unchanged, PRD ticked off, live URL recorded
